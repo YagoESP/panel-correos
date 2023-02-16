@@ -10,3 +10,4 @@ import  "./tabla.js";
 import "./title.js";
 import "./menu.js";
 import "./form.js";
+import "./notificacion.js";

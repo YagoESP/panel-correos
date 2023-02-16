@@ -15,6 +15,24 @@ class FormBuilder extends HTMLElement {
         document.addEventListener("newUrl",( event =>{
             this.setAttribute('url', event.detail.url);
         }));
+
+        document.addEventListener("showElement", async (event) => {
+
+            this.id = event.detail.id;
+
+            this.showElement(event.detail.id)
+                
+        });
+      
+        document.addEventListener("showDeleteModal", (event => {
+
+            this.id = event.detail.id;
+
+            this.showDeleteModal(event.detail.id)
+
+            
+
+        }));
     }
 
     async attributeChangedCallback(name, oldValue, newValue){
@@ -530,12 +548,14 @@ class FormBuilder extends HTMLElement {
         this.renderTabs();
         this.renderSubmitForm();
         this.renderCreateForm();
+        this.renderStoreForm();
     }
 
     renderSubmitForm = () => {
         let form = this.shadow.querySelector('form');
        
         form.addEventListener('submit', async (e) => {
+            
             e.preventDefault();
         
             let formData = new FormData(form);
@@ -570,18 +590,30 @@ class FormBuilder extends HTMLElement {
 
     }
 
-    renderCreateForm = () => {
-        let iconClear = document.getElementById('create-button')
+    renderStoreForm = () => {
 
-        iconClear.addEventListener('click', (e) =>{
-            e.preventDefault();
+        let storeButton = this.shadow.getElementById('store-button');
 
-            let form = this.shadow.querySelector('form');
+        storeButton.addEventListener('click', () => {
+            this.dispatchEvent(new CustomEvent('save', {
+                detail: {storeButton: storeButton.id }
 
-            this.render(form)
-
+            }));
+            
         });
     }
+
+    renderCreateForm = () => {
+        let iconClear = this.shadow.getElementById('create-button')
+      
+        iconClear.addEventListener('click', (e) => {
+            e.preventDefault();
+      
+            let form = this.shadow.querySelector('form');
+      
+            this.render(form);
+        });
+      }
 
     renderTabs = () => {
 
@@ -608,6 +640,61 @@ class FormBuilder extends HTMLElement {
                 });
             });
         });
+    }
+
+
+    async showElement(id){
+
+        let url = `${API_URL}${this.getAttribute('url')}/${id}`;
+
+        try {
+            const response = await fetch(url, {
+                headers: {
+                    'x-access-token': sessionStorage.getItem('accessToken')
+                }
+            });
+        
+            if(response.ok){
+                let result = await response.json();
+                console.log(result)
+
+                for(const [key, value] of Object.entries(result)){
+                    if(this.shadow.querySelector(`[name="${key}"]`)){
+                        this.shadow.querySelector(`[name="${key}"]`).value = value;
+                    }
+                }
+            }else{
+                console.log("Fallo");
+            }
+    
+        } catch (error) {
+            console.error(error);
+        }
+    }
+
+    async showDeleteModal(id){
+
+        let url = `${API_URL}${this.getAttribute('url')}/${id}`;
+
+        try {
+            const response = await fetch(url, {
+                method: 'DELETE',
+                headers: {
+                    
+                    'x-access-token': sessionStorage.getItem('accessToken')
+                }
+            });
+
+            if (response.ok) {
+                console.log('Fila eliminada exitosamente');
+            } else {
+                console.log('Fallo al eliminar la fila');
+            }
+        } catch (error) {
+            console.error(error);
+        }
+        
+        this.render();
     }
 
     setFormStructure = async () => {

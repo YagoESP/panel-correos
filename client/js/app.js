@@ -1,0 +1,12 @@
+// import  "./hamburguesa.js";
+// import  "./agregar.js";
+// import  "./cerrarModal.js";
+// import  "./editar.js";
+// import  "./filtro.js";
+ import  "./loginForm.js";
+// import  "./clientes.js";
+import  "./tabla.js";
+// import  "./hamburguesa.js";
+import "./title.js";
+import "./menu.js";
+import "./form.js";

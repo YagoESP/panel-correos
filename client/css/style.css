@@ -1,0 +1,665 @@
+/* Fuente*/
+
+h1,h2,h3,h4,h5,p{
+    font-family: 'Arvo', serif;
+    font-weight: 500;
+}
+
+input{
+    border: none;
+}
+
+svg{
+    cursor: pointer;
+}
+/*PANEL DE LOGIN*/
+
+body{
+    background: #3E94EC;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: auto;
+}
+
+.contenedor-form{
+    width: 25%;
+    margin: auto;
+    
+}
+
+.login{
+    margin-top: 10rem;
+    padding: 2rem;
+    transition: 0.4s;
+    padding-top: 0.5rem;
+    border-radius: 0.5rem;
+    background: white;
+    box-shadow:
+       inset 0 -3em 3em rgba(0,0,0,0.1),
+             0 0  0 2px rgb(255,255,255),
+             0.3em 0.3em 1em rgba(0,0,0,0.3);
+             
+}
+
+form h2{
+    text-transform:uppercase;
+    color:#414141;
+    border-bottom:3px solid rgba(0,0,0,.1);
+}
+
+.login-usuario{
+    width: 100%;
+    margin: auto;
+    padding-bottom: 1rem;
+}
+
+.login-usuario input{
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.3rem;
+    width: 100%;
+    border-bottom:3px solid rgba(0,0,0,.1);
+    outline: none;
+}
+
+.login-usuario input:hover{
+    color:#673AB7;
+    outline:none;
+    border-bottom:4px solid #673AB7;
+    transition: 0.3s;
+}
+
+
+
+.login-contra{
+    width: 100%;
+    margin: auto;
+    padding-bottom: 1rem;
+    
+}
+
+.login-contra input{
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.3rem;
+    width: 100%;
+    border-bottom:3px solid rgba(0,0,0,.1);
+    outline: none;
+}
+
+.login-contra input:hover{
+    color:#673AB7;
+    outline:none;
+    border-bottom:4px solid #673AB7;
+    transition: 0.3s;
+}
+
+
+.login-boton{
+    width: 100%;
+}
+
+.login-boton button{
+    cursor: pointer;
+    padding: 1rem 4rem;
+    background:  #173e64;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border-radius: 0.3rem;
+    color: white;
+    width: 100%;
+    box-shadow:
+       inset 0 -3em 3em rgba(0,0,0,0.1),
+             0 0  0 2px rgba(255, 255, 255, 0),
+             0.3em 0.3em 1em rgba(0,0,0,0.3);
+}
+
+.login-boton button:hover{
+    background:#673AB7;
+    transition: 1s;
+}
+
+
+/*PANEL DE LOGIN*/
+
+.panel{
+    display: flex;
+    width: 100%;
+    
+}
+/* Panel de correos*/
+
+
+.panel-correos{
+    border: 2px solid black;
+    width: 65%;
+    margin: 1rem;
+    background: white;
+    box-shadow:
+       inset 0 -3em 3em rgba(0,0,0,0.1),
+             0 0  0 2px rgb(255,255,255),
+             0.3em 0.3em 1em rgba(0,0,0,0.3);
+}
+
+.panel-correos .titulos{
+    display: flex;
+    padding: 1rem;
+    justify-content: space-between;
+    width: 97.5%;
+    background:#1b1e24;
+    color:#D5DDE5;
+    
+}
+
+.panel-correos .titulos .titulo{
+    text-align: center;
+    width: 50%;
+}
+
+.correos{
+    display: flex;
+    padding: 1rem;
+    justify-content: space-between;
+    margin: auto;
+    border: 1px solid black;
+}
+
+.correos:hover{
+    background:#8a8ba0;
+    transition: 0.5s;
+}
+
+.correos .correo-informacion{
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+    text-align: start;
+}
+
+.correos .correo-iconos{
+    display: flex;
+    width: 30%;
+    justify-content: space-between;
+}
+
+.correos .correo-informacion .informacion{
+    margin: auto;
+    text-align: center;
+    width: 100%;
+}
+
+.correos .correo-iconos .iconos{
+    width: 100%;
+    text-align: center;
+}
+
+.correos .correo-informacion .informacion p{
+    font-size: 1.1rem;
+}
+
+/* Editor de correos Panel*/
+
+.panel-editor{
+    margin: auto;
+    width: 35%;
+}
+
+.editor{
+    margin: 1rem;
+    border: 2px solid black;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background: white;
+    box-shadow:
+       inset 0 -3em 3em rgba(0,0,0,0.1),
+             0 0  0 2px rgb(255,255,255),
+             0.3em 0.3em 1em rgba(0,0,0,0.3);
+}
+
+.editor-asunto{
+    width: 85%;  
+    margin: auto;
+}
+
+.editor-asunto label input{
+    width: 100%;
+    padding: 0.7rem;
+    border-radius: 0.3rem;
+    margin-bottom: 1rem;
+    outline: none;
+    border-bottom: grey 4px solid;
+}
+
+.editor-asunto label input:hover{
+    transition: 0.5s;
+    border-bottom: #673AB7 4px solid;
+}
+
+.editor-correo{
+    width: 85%;  
+    margin: auto;
+}
+
+.editor-correo label input{
+    width: 100%;
+    padding: 0.35rem;
+    border-radius: 0.3rem;
+    margin-bottom: 1rem;
+    outline: none;
+    border-bottom: grey 4px solid;
+}
+
+.editor-correo label input:hover{
+    transition: 0.5s;
+    border-bottom: #673AB7 4px solid;
+}
+
+
+.editor-contenido{
+    width: 85%;  
+    margin: auto;
+}
+
+.editor-contenido label textarea{
+    width: 100%;
+    padding-bottom: 5rem;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    border-radius: 0.3rem;
+    font-size: 1.3rem;
+    outline: none;
+
+}
+
+.editor-botones{
+    display: flex;
+    width: 85%;  
+    margin: auto;
+    margin-bottom: 1rem;
+}
+
+.editor-botones .aceptar{
+    display: flex;
+    width: 85%;  
+    margin: auto;
+}
+
+.editor-botones .aceptar button{
+    width: 90%;
+    margin: auto;
+    padding: 0.5rem;
+    background: rgba(115, 255, 0, 0.767);
+    cursor: pointer;
+}
+
+.editor-botones .aceptar button:hover{
+    transition: 0.5s;
+    background: rgba(70, 148, 6, 0.973);
+    color: #ffffff;
+}
+
+.editor-botones .cancelar{
+    display: flex;
+    width: 85%;  
+    margin: auto;
+    
+}
+
+.editor-botones .cancelar button{
+    width: 90%;
+    margin: auto;
+    padding: 0.5rem;
+    background: rgba(255, 0, 0, 0.719);
+    cursor: pointer;
+}
+
+.editor-botones .cancelar button:hover{
+    transition: 0.5s;
+    background: rgb(156, 8, 8);
+    color: #ffffff;
+
+}
+
+/* PANEL DE CLIENTES*/
+
+.panel-clientes{
+    border: 2px solid black;
+    width: 100%;
+    margin: 1rem;
+    background: white;
+    box-shadow:
+       inset 0 -3em 3em rgba(0,0,0,0.1),
+             0 0  0 2px rgb(255,255,255),
+             0.3em 0.3em 1em rgba(0,0,0,0.3);
+}
+
+.panel-clientes .titulos{
+    display: flex;
+    padding: 1rem;
+    justify-content: space-between;
+    width: 98.3%;
+    background: #1b1e24;
+    color: white;
+}
+
+.panel-clientes .titulos .titulo{
+    text-align: center;
+    width: 100%;
+}
+
+.panel-clientes .correos{
+    width: 98.3%;
+}
+
+.panel-clientes .correos .correo-cliente{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+}
+
+.panel-clientes .correos .correo-cliente .informacion{
+    width: 100%;
+    
+}
+
+
+.panel-clientes .correos .correo-iconos-clientes{
+    display: flex;
+    width: 30%;
+    justify-content: space-between;
+}
+
+
+
+.panel-clientes .correos .correo-iconos-clientes .iconos{
+    width: 100%;
+    text-align: center;
+}
+
+/* MODAL AGREGAR */
+
+.agregar{
+    visibility: hidden;
+    transition: 0.4s;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.active{
+    visibility: visible;
+    transition: 0.4s;
+}
+
+.agregar .model{
+    width: 40%;
+    margin: auto;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background: white;
+    box-shadow:
+       inset 0 -3em 3em rgba(0,0,0,0.1),
+             0 0  0 2px rgb(255,255,255),
+             0.3em 0.3em 1em rgba(0,0,0,0.3);
+
+}
+
+.agregar .model .model-filtro{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: auto;
+}
+
+.agregar .model .model-filtro h4{
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.agregar .model .model-filtro svg{
+    width: 2.3rem;
+    color: rgb(224, 18, 18);
+}
+.agregar .model .model-filtro svg:hover{
+    color: rgb(128, 10, 10);
+}
+
+.agregar .model .model-input{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.5rem;
+    margin: auto;
+}
+.agregar .model .model-input input{
+    padding: 0.5rem;
+    margin: 0.5rem;
+    width: 100%;
+    border-bottom: grey 4px solid;
+    outline: none;
+}
+
+.filtro .model .model-input input:hover{
+    transition: 0.5s;
+    border-bottom: #673AB7 4px solid;
+  
+}
+
+
+.agregar .model button{
+    width: 20%;
+    background: #673AB7;
+    padding: 1rem;
+    margin-top: 1rem;
+    color: white;
+    border-radius: 0.3rem;
+}
+
+
+.agregar .model button:hover{
+    background: #173e64;
+    transition: 0.5s;
+}
+
+/* MODAL FILTER*/
+
+.filtro{
+    visibility: hidden;
+    transition: 0.4s;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.active{
+    visibility: visible;
+    transition: 0.4s;
+}
+
+.filtro .model{
+    width: 40%;
+    margin: auto;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background: white;
+    box-shadow:
+       inset 0 -3em 3em rgba(0,0,0,0.1),
+             0 0  0 2px rgb(255,255,255),
+             0.3em 0.3em 1em rgba(0,0,0,0.3);
+
+}
+
+.filtro .model .model-filtro{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: auto;
+}
+
+.filtro .model .model-filtro h4{
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.filtro .model .model-filtro svg{
+    width: 2.3rem;
+    color: rgb(224, 18, 18);
+}
+.filtro .model .model-filtro svg:hover{
+    color: rgb(128, 10, 10);
+}
+
+.filtro .model .model-input{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.5rem;
+    margin: auto;
+}
+.filtro .model .model-input input{
+    padding: 0.5rem;
+    margin: 0.5rem;
+    width: 100%;
+    border-bottom: grey 4px solid;
+    outline: none;
+}
+
+.filtro .model .model-input input:hover{
+    transition: 0.5s;
+    border-bottom: #673AB7 4px solid;
+  
+}
+
+
+.filtro .model button{
+    width: 20%;
+    background: #673AB7;
+    padding: 1rem;
+    margin-top: 1rem;
+    color: white;
+    border-radius: 0.3rem;
+}
+
+
+.filtro .model button:hover{
+    background: #173e64;
+    transition: 0.5s;
+}
+
+/* MODAL EDITAR  */
+
+.filtro{
+    visibility: hidden;
+    transition: 0.4s;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.active{
+    visibility: visible;
+    transition: 0.4s;
+}
+
+.filtro .model{
+    width: 40%;
+    margin: auto;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background: white;
+    box-shadow:
+       inset 0 -3em 3em rgba(0,0,0,0.1),
+             0 0  0 2px rgb(255,255,255),
+             0.3em 0.3em 1em rgba(0,0,0,0.3);
+
+}
+
+.filtro .model .model-filtro{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: auto;
+}
+
+.filtro .model .model-filtro h4{
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.filtro .model .model-filtro svg{
+    width: 2.3rem;
+    color: rgb(224, 18, 18);
+}
+.filtro .model .model-filtro svg:hover{
+    color: rgb(128, 10, 10);
+}
+
+.filtro .model .model-input{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.5rem;
+    margin: auto;
+}
+.filtro .model .model-input input{
+    padding: 0.5rem;
+    margin: 0.5rem;
+    width: 100%;
+    border-bottom: grey 4px solid;
+    outline: none;
+}
+
+.filtro .model .model-input input:hover{
+    transition: 0.5s;
+    border-bottom: #673AB7 4px solid;
+  
+}
+
+.filtro .model button{
+    width: 20%;
+    background: #673AB7;
+    padding: 1rem;
+    margin-top: 1rem;
+    color: white;
+    border-radius: 0.3rem;
+}
+
+.filtro .model button:hover{
+    background: #173e64;
+    transition: 0.5s;
+}
+
+/* MODAL AVISO DE CONFIRMACION */
+
+header{
+    background: black;
+    width: 100%;
+}
+title-component{
+    text-align: center;
+    
+    width: 100%;
+}
+
+.enlaces{
+    width: 100%;
+    background: white;
+}
+
+.separacion{
+    width: 100%;
+    display: flex;
+    margin-top: 1rem;
+}
+
+.tabla{
+    width: 55%;
+    margin: auto;
+}
+
+.form{
+    width: 35%;
+    margin: auto;
+    
+}
